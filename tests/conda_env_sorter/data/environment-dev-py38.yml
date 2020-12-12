@@ -1,0 +1,20 @@
+name: pymc3-dev-py38
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - h5py>=2.7
+  - libblas=*=*mkl
+  - ipython>=7.16
+  - pytest>=3.0
+  - python=3.8
+  - mkl-service # comment
+  - numpydoc>=0.9
+  - nbsphinx>=0.4
+  - pre-commit>=2.8.0
+  - python-graphviz
+  - pytest-cov>=2.5
+  - recommonmark>=0.4
+  - sphinx-autobuild>=0.7
+  - sphinx>=1.5
+  - watermark
