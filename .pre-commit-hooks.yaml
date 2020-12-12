@@ -2,5 +2,5 @@
   name: Sort dependencies in conda environment files.
   entry: conda-env-sorter
   language: python
-  files: environment.*\.yml$
+  files: environment
   types: [yaml]

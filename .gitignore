@@ -3,3 +3,5 @@
 .tox/*
 coverage.xml
 .coverage
+build/*
+dist/*
