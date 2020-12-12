@@ -1,0 +1,6 @@
+- id: conda-env-sorter
+  name: Sort dependencies in conda environment files.
+  entry: conda-env-sorter
+  language: python
+  files: environment.*\.yml$
+  types: [yaml]
