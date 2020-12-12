@@ -28,7 +28,7 @@ dependencies:
 - h5py>=2.7
 - ipython>=7.16
 - libblas=*=*mkl
-- mkl-service   # comment
+- mkl-service
 - nbsphinx>=0.4
 - numpydoc>=0.9
 - pre-commit>=2.8.0
