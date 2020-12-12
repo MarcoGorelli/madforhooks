@@ -8,7 +8,7 @@ from madforhooks.conda_env_sorter import main
 
 ROOT = Path(__file__).parent.parent.parent
 
-TESTFILE = Path("tests") / "conda-env-sorter/data/environment-dev-py38.yml"
+TESTFILE = Path("tests") / "conda_env_sorter/data/environment-dev-py38.yml"
 
 if TYPE_CHECKING:
     from _pytest.pytester import Testdir
@@ -28,7 +28,7 @@ dependencies:
 - h5py>=2.7
 - ipython>=7.16
 - libblas=*=*mkl
-- mkl-service  # comment
+- mkl-service   # comment
 - nbsphinx>=0.4
 - numpydoc>=0.9
 - pre-commit>=2.8.0
