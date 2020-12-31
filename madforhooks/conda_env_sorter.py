@@ -9,7 +9,7 @@ import ruamel.yaml
 yaml = ruamel.yaml.YAML()
 
 
-def main(argv: Optional[Sequence[str]] = None) -> None:
+def main(argv: Optional[Sequence[str]] = None ) -> None:
     """Sort dependencies in conda environment files."""
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*", type=Path)
