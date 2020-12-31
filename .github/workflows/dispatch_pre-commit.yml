@@ -32,7 +32,7 @@ jobs:
       - name: Slash Command Dispatch
         run: |
           git remote -v
-          git diff upstream/main
+          git diff origin/main
       - name: Commit results
         run: |
           git config user.name "$(git log -1 --pretty=format:%an)"
