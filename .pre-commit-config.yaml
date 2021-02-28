@@ -39,7 +39,7 @@ repos:
         files: ^madforhooks/
         exclude: /__init__\.py$
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.800
+    rev: v0.812
     hooks:
       - id: mypy
   - repo: https://github.com/asottile/pyupgrade
