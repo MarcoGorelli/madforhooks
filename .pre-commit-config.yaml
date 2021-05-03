@@ -6,11 +6,11 @@ repos:
       - id: trailing-whitespace
       - id: debug-statements
   - repo: https://github.com/pre-commit/pre-commit
-    rev: v2.10.1
+    rev: v2.12.1
     hooks:
       - id: validate_manifest
   - repo: https://github.com/psf/black
-    rev: 20.8b1
+    rev: 21.4b2
     hooks:
       - id: black
   - repo: https://github.com/pre-commit/mirrors-prettier
@@ -19,21 +19,21 @@ repos:
       - id: prettier
         exclude: ^README\.md$
   - repo: https://github.com/PyCQA/pylint
-    rev: pylint-2.6.0
+    rev: v2.8.2
     hooks:
       - id: pylint
         files: ^(madforhooks|tests)/
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.8.4
+  - repo: https://github.com/PyCQA/flake8
+    rev: 3.9.1
     hooks:
       - id: flake8
         additional_dependencies: [flake8-typing-imports==1.10.0]
   - repo: https://github.com/PyCQA/isort
-    rev: 5.7.0
+    rev: 5.8.0
     hooks:
       - id: isort
   - repo: https://github.com/PyCQA/pydocstyle
-    rev: 5.1.1
+    rev: 6.0.0
     hooks:
       - id: pydocstyle
         files: ^madforhooks/
@@ -43,7 +43,7 @@ repos:
     hooks:
       - id: mypy
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.10.0
+    rev: v2.14.0
     hooks:
       - id: pyupgrade
         args: [--py36-plus]
@@ -53,7 +53,7 @@ repos:
       - id: codespell
         files: \.(py|rst|md)$
   - repo: https://github.com/asottile/setup-cfg-fmt
-    rev: v1.16.0
+    rev: v1.17.0
     hooks:
       - id: setup-cfg-fmt
   - repo: meta
