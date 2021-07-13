@@ -17,7 +17,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     for path in args.paths:
         doc = yaml.load(path)
         last_one = doc["dependencies"][-1]
-        if isinstance(last_one,ruamel.yaml.comments.CommentedMap):
+        if isinstance(last_one, ruamel.yaml.comments.CommentedMap):
             doc["dependencies"].pop(-1)
         doc["dependencies"].sort()
         doc["dependencies"].append(last_one)
