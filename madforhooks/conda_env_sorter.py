@@ -16,11 +16,23 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     args = parser.parse_args(argv)
     for path in args.paths:
         doc = yaml.load(path)
-        last_one = doc["dependencies"][-1]
-        if isinstance(last_one, ruamel.yaml.comments.CommentedMap):
-            doc["dependencies"].pop(-1)
-        doc["dependencies"].sort()
-        doc["dependencies"].append(last_one)
+        dicts = []
+        others = []
+
+        for x in doc["dependencies"]:
+            if isinstance(x, dict):
+                dicts.append(x)
+            else:
+                others.append(x)
+        others.sort(key=lambda x: str(x))
+        for d in dicts:
+            for v in d.values():
+                if isinstance(v, list):
+                    v.sort(key=lambda x: str(x))
+        dicts.sort(key=lambda x: str(x))
+        doc["dependencies"].clear()
+        doc["dependencies"].extend(others)
+        doc["dependencies"].extend(dicts)
 
         yaml.dump(doc, path)
 
