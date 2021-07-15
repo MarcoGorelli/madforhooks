@@ -40,5 +40,8 @@ dependencies:
 - sphinx-autobuild>=0.7
 - sphinx>=1.5
 - watermark
+- pip:
+  - covdefaults
+  - coverage
 """
     assert result == expected

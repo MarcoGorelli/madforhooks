@@ -19,17 +19,17 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         dicts = []
         others = []
 
-        for x in doc["dependencies"]:
-            if isinstance(x, dict):
-                dicts.append(x)
+        for term in doc["dependencies"]:
+            if isinstance(term, dict):
+                dicts.append(term)
             else:
-                others.append(x)
-        others.sort(key=lambda x: str(x))
-        for d in dicts:
-            for v in d.values():
-                if isinstance(v, list):
-                    v.sort(key=lambda x: str(x))
-        dicts.sort(key=lambda x: str(x))
+                others.append(term)
+        others.sort(key=str)
+        for dict_term in dicts:
+            for value in dict_term.values():
+                if isinstance(value, list):
+                    value.sort(key=str)
+        dicts.sort(key=str)
         doc["dependencies"].clear()
         doc["dependencies"].extend(others)
         doc["dependencies"].extend(dicts)
