@@ -16,7 +16,24 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     args = parser.parse_args(argv)
     for path in args.paths:
         doc = yaml.load(path)
-        doc["dependencies"].sort()
+        dicts = []
+        others = []
+
+        for term in doc["dependencies"]:
+            if isinstance(term, dict):
+                dicts.append(term)
+            else:
+                others.append(term)
+        others.sort(key=str)
+        for dict_term in dicts:
+            for value in dict_term.values():
+                if isinstance(value, list):
+                    value.sort(key=str)
+        dicts.sort(key=str)
+        doc["dependencies"].clear()
+        doc["dependencies"].extend(others)
+        doc["dependencies"].extend(dicts)
+
         yaml.dump(doc, path)
 
 
