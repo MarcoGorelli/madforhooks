@@ -12,7 +12,7 @@ Put this in the `repos` section of your `.pre-commit-config.yaml` file:
 
 ```yaml
 -   repo: https://github.com/MarcoGorelli/madforhooks
-    rev: 0.1.2
+    rev: 0.1.3
     hooks:
     -   id: conda-env-sorter
 ```
