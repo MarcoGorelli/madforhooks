@@ -18,6 +18,13 @@ Put this in the `repos` section of your `.pre-commit-config.yaml` file:
     -   id: no-print-statements
 ```
 
+Or, from the commandline:
+
+```console
+pip install madforhooks
+python -m madforhooks.no_print_statements file1.py file2.py file3.py
+```
+
 ## Hooks available
 
 ### conda-env-sorter
