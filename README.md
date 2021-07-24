@@ -15,6 +15,7 @@ Put this in the `repos` section of your `.pre-commit-config.yaml` file:
     rev: 0.1.3
     hooks:
     -   id: conda-env-sorter
+    -   id: no-print-statements
 ```
 
 ## Hooks available
