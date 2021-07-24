@@ -4,3 +4,8 @@
   language: python
   files: environment
   types: [yaml]
+- id: no-print-statements
+  name: Disallow print statements
+  entry: no-print-statements
+  language: python
+  types: [python]
