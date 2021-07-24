@@ -23,3 +23,7 @@ Put this in the `repos` section of your `.pre-commit-config.yaml` file:
 ### conda-env-sorter
 
 Sort the dependencies in your conda environment file(s).
+
+### no-print-statements
+
+Raise if print statements are found.
