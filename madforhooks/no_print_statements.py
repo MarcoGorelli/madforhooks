@@ -10,7 +10,11 @@ class Visitor(ast.NodeVisitor):
         self.print_statements = False
 
     def visit_Call(self, node: ast.Call) -> None:
-        if isinstance(node.func, ast.Name) and node.func.id == "print":
+        if (
+            isinstance(node.func, ast.Name)
+            and node.func.id == "print"
+            and "file" not in {keyword.arg for keyword in node.keywords}
+        ):
             self.print_statements = True
             sys.stdout.write(
                 f"{self.file}:{node.lineno}:{node.col_offset} "
