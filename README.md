@@ -33,4 +33,4 @@ Sort the dependencies in your conda environment file(s).
 
 ### no-print-statements
 
-Raise if print statements are found.
+Raise if print statements are found (unless they have `file=`).
