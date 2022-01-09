@@ -9,3 +9,8 @@
   entry: no-print-statements
   language: python
   types: [python]
+- id: check-execution-order
+  name: Check cells were executed sequentially
+  entry: no-print-statements
+  language: python
+  types: [jupyter]

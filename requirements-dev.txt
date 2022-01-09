@@ -1,3 +1,4 @@
+tomli
 covdefaults
 coverage
 pytest[toml]
