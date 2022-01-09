@@ -11,6 +11,6 @@
   types: [python]
 - id: check-execution-order
   name: Check cells were executed sequentially
-  entry: no-print-statements
+  entry: check-execution-order
   language: python
   types: [jupyter]
