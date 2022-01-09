@@ -12,17 +12,18 @@ Put this in the `repos` section of your `.pre-commit-config.yaml` file:
 
 ```yaml
 -   repo: https://github.com/MarcoGorelli/madforhooks
-    rev: 0.2.1
+    rev: 0.3.0
     hooks:
     -   id: conda-env-sorter
     -   id: no-print-statements
+    -   id: check-execution-order
 ```
 
 Or, from the commandline:
 
 ```console
 pip install madforhooks
-python -m madforhooks.no_print_statements file1.py file2.py file3.py
+python -m madforhooks.check_execution_order file1.ipynb file2.ipynb file3.ipynb
 ```
 
 ## Hooks available
@@ -34,3 +35,8 @@ Sort the dependencies in your conda environment file(s).
 ### no-print-statements
 
 Raise if print statements are found (unless they have `file=`).
+
+### check-execution-order
+
+Raise if notebook cells were executed out-of-order. Use `--strict` to ensure
+strict monotonicity.
