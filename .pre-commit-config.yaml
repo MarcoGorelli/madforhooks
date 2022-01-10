@@ -1,48 +1,48 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.4.0
+    rev: v4.1.0
     hooks:
       - id: end-of-file-fixer
       - id: trailing-whitespace
       - id: debug-statements
   - repo: https://github.com/pre-commit/pre-commit
-    rev: v2.10.1
+    rev: v2.16.0
     hooks:
       - id: validate_manifest
   - repo: https://github.com/psf/black
-    rev: 20.8b1
+    rev: 21.12b0
     hooks:
       - id: black
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v2.2.1
+    rev: v2.5.1
     hooks:
       - id: prettier
         exclude: ^README\.md$
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.8.4
+  - repo: https://github.com/PyCQA/flake8
+    rev: 4.0.1
     hooks:
       - id: flake8
         additional_dependencies: [flake8-typing-imports==1.10.0]
   - repo: https://github.com/PyCQA/isort
-    rev: 5.7.0
+    rev: 5.10.1
     hooks:
       - id: isort
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.812
+    rev: v0.931
     hooks:
       - id: mypy
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.10.0
+    rev: v2.31.0
     hooks:
       - id: pyupgrade
         args: [--py36-plus]
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.0.0
+    rev: v2.1.0
     hooks:
       - id: codespell
         files: \.(py|rst|md)$
   - repo: https://github.com/asottile/setup-cfg-fmt
-    rev: v1.16.0
+    rev: v1.20.0
     hooks:
       - id: setup-cfg-fmt
   - repo: meta
