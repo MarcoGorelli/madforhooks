@@ -52,3 +52,7 @@ strict monotonicity.
 Check that test names start with `test`. This is useful for finding
 tests which are meant to be running in CI, but which don't because they
 are misnamed.
+
+If there are any false positives, you prevent this tool from flagging them
+by adding a `# not a test` comment one the line where the function/class is
+defined.
