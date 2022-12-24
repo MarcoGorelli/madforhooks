@@ -126,7 +126,7 @@ def check_test_naming(content: str, file: str) -> int:
     return ret
 
 
-def main(argv: Sequence[str] | None = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:  # pragma: nocover
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*")
     args = parser.parse_args()
