@@ -2,7 +2,7 @@ from typing import Any
 
 import pytest
 
-from madforhooks.check_test_naming import main
+from madforhooks.check_test_naming import check_test_naming
 
 
 @pytest.mark.parametrize(
@@ -50,7 +50,7 @@ from madforhooks.check_test_naming import main
     ],
 )
 def test_main(capsys: Any, src: str, expected_out: str, expected_ret: int) -> None:
-    ret = main(src, "t.py")
+    ret = check_test_naming(src, "t.py")
     out, _ = capsys.readouterr()
     assert out == expected_out
     assert ret == expected_ret

@@ -65,7 +65,7 @@ def is_misnamed_test_class(
     )
 
 
-def main(content: str, file: str) -> int:
+def check_test_naming(content: str, file: str) -> int:
     lines = content.splitlines()
     tree = ast.parse(content)
     names = list(_find_names(tree))
@@ -126,7 +126,7 @@ def main(content: str, file: str) -> int:
     return ret
 
 
-if __name__ == "__main__":
+def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("paths", nargs="*")
     args = parser.parse_args()
@@ -139,6 +139,10 @@ if __name__ == "__main__":
             continue
         with open(file, encoding="utf-8") as fd:
             content = fd.read()
-        ret |= main(content, file)
+        ret |= check_test_naming(content, file)
 
-    sys.exit(ret)
+    return ret
+
+
+if __name__ == "__main__":
+    sys.exit(main())

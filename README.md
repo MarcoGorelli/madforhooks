@@ -12,7 +12,7 @@ Put this in the `repos` section of your `.pre-commit-config.yaml` file:
 
 ```yaml
 -   repo: https://github.com/MarcoGorelli/madforhooks
-    rev: 0.3.0
+    rev: 0.4.1
     hooks:
     -   id: conda-env-sorter
     -   id: no-print-statements
