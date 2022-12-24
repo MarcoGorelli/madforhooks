@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import argparse
 import ast
 import sys
@@ -32,7 +34,7 @@ def no_print_statements(content: str, file: str) -> int:
     return 0
 
 
-def main(argv: Sequence[str] = None) -> int:
+def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("files", nargs="*")
     args = parser.parse_args(argv)
