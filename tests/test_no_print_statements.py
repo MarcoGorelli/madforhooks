@@ -1,7 +1,6 @@
 """Test conda-env-sorter."""
 
 from pathlib import Path
-
 from typing import Any
 
 from madforhooks.no_print_statements import main, no_print_statements
