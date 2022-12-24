@@ -17,6 +17,7 @@ Put this in the `repos` section of your `.pre-commit-config.yaml` file:
     -   id: conda-env-sorter
     -   id: no-print-statements
     -   id: check-execution-order
+    -   id: check-test-naming
 ```
 
 Or, from the commandline:
@@ -24,6 +25,11 @@ Or, from the commandline:
 ```console
 pip install madforhooks
 python -m madforhooks.check_execution_order file1.ipynb file2.ipynb file3.ipynb
+```
+
+Example of how to run ``check-test-naming`` on your test directory:
+```console
+git ls-files | xargs python -m madforhooks.check_test_naming
 ```
 
 ## Hooks available
@@ -40,3 +46,9 @@ Raise if print statements are found (unless they have `file=`).
 
 Raise if notebook cells were executed out-of-order. Use `--strict` to ensure
 strict monotonicity.
+
+### check-test-naming
+
+Check that test names start with `test`. This is useful for finding
+tests which are meant to be running in CI, but which don't because they
+are misnamed.

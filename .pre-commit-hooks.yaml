@@ -14,3 +14,8 @@
   entry: check-execution-order
   language: python
   types: [jupyter]
+- id: check-test-naming
+  name: Check test names start with 'test'
+  entry: check-test-naming
+  language: python
+  types: [python]

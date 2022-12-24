@@ -1,3 +1,6 @@
+"""
+self.foo()  # for use in another test
+"""
 import os
 
 from _pytest.capture import capsys
