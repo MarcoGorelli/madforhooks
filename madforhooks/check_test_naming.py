@@ -50,8 +50,14 @@ def is_misnamed_test_func(
         and not any(_is_fixture(decorator) for decorator in node.decorator_list)
         and PRAGMA not in line
         and node.name
-        not in ("teardown_method", "setup_method", "teardown_class", "setup_class",
-                "teardown_module", "setup_module")
+        not in (
+            "teardown_method",
+            "setup_method",
+            "teardown_class",
+            "setup_class",
+            "teardown_module",
+            "setup_module",
+        )
     )
 
 
