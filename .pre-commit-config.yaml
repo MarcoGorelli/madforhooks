@@ -10,25 +10,25 @@ repos:
     hooks:
       - id: validate_manifest
   - repo: https://github.com/psf/black
-    rev: 23.11.0
+    rev: 24.1.1
     hooks:
       - id: black
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v4.0.0-alpha.4
+    rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
         exclude: ^README\.md$
   - repo: https://github.com/PyCQA/flake8
-    rev: 6.1.0
+    rev: 7.0.0
     hooks:
       - id: flake8
         additional_dependencies: [flake8-typing-imports==1.14.0]
   - repo: https://github.com/PyCQA/isort
-    rev: 5.13.1
+    rev: 5.13.2
     hooks:
       - id: isort
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.7.1
+    rev: v1.8.0
     hooks:
       - id: mypy
   - repo: https://github.com/asottile/pyupgrade
